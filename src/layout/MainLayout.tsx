@@ -12,22 +12,30 @@ function Root() {
   const navigate = useNavigate();
 
   return (
-    <Container maxWidth="sm" sx={{ padding: 0, height: '100%' }}>
+    <Container
+      sx={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'align',
+        justifyContent: 'center',
+      }}
+    >
       <main>
         <Outlet />
       </main>
       <BottomNavigation
+        className="bottom-navigation"
         sx={{
           backgroundColor: '#17171b',
           position: 'fixed',
           padding: 0,
           bottom: 0,
-          height: '80px',
           width: '100%',
+          height: '80px',
           display: 'flex',
           alignItems: 'center',
         }}
-        className="bottom-navigation"
         value={navigationValue}
         onChange={(event, newValue) => {
           setNavigationValue(newValue);

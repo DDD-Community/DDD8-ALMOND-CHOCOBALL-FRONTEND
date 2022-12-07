@@ -1,13 +1,16 @@
-/* html body 100vh */
-
 html {
-  height: 100%;
+  height: 100vh;
 }
 body {
+  height: 100vh;
   color: #fff;
   background-color: #17171b;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}
 body {
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
