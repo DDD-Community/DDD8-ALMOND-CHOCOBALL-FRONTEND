@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
+import './Upload.css';
 
 function Upload() {
   const navigate = useNavigate();
