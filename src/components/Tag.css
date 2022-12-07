@@ -1,0 +1,15 @@
+.tag {
+  color: #000;
+  height: 20px;
+  width: auto;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.tag + .tag {
+  margin-left: 8px;
+}
