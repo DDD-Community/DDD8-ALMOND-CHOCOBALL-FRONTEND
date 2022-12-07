@@ -1,28 +1,19 @@
 .image-container {
   position: relative;
+  height: 600px;
 }
 
-.main-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-section {
-  padding: 20px;
+.one {
   position: absolute;
-  top: 0;
+  z-index: 1;
 }
 
-.title-container {
-  margin-top: 32px;
-  left: 30px;
-  color: #000;
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
+.two {
+  position: absolute;
+  z-index: 2;
 }
 
-.tag-container {
-  margin-top: 20px;
+.three {
+  position: absolute;
+  z-index: 3;
 }
