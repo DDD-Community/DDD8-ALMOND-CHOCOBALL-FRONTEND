@@ -1,0 +1,28 @@
+.image-container {
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+section {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+}
+
+.title-container {
+  margin-top: 32px;
+  left: 30px;
+  color: #000;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.tag-container {
+  margin-top: 20px;
+}
