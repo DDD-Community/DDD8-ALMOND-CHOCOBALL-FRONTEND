@@ -1,24 +1,27 @@
 import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineLeft } from 'react-icons/ai';
+import { AiOutlineLeft, AiOutlineClose } from 'react-icons/ai';
+import { useState } from 'react';
 import './Upload.css';
-import { TextField } from '@mui/material';
 import ImageUploading, { ImageListType } from 'react-images-uploading';
 
 function Upload() {
   const navigate = useNavigate();
-  const [images, setImages] = React.useState([]);
+  const [images, setImages] = useState([]);
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const [tagList, setTagList] = useState<string[]>([]);
+
   const maxNumber = 5;
 
   const onChange = (
     imageList: ImageListType,
     addUpdateIndex: number[] | undefined
   ) => {
-    // data for submit
-    console.log(imageList, addUpdateIndex);
     setImages(imageList as never[]);
   };
+
   return (
     <div>
       <Header
@@ -28,7 +31,15 @@ function Upload() {
             onClick={() => navigate(-1)}
           />
         }
-        right={<span onClick={() => {}}>완료</span>}
+        right={
+          <span
+            onClick={() => {
+              navigate('/');
+            }}
+          >
+            완료
+          </span>
+        }
       />
 
       <div className="upload-image-container">
@@ -56,7 +67,7 @@ function Upload() {
                       className="image-remove-button"
                       onClick={() => onImageRemove(index)}
                     >
-                      X
+                      x
                     </button>
                   </div>
                 </div>
@@ -67,15 +78,65 @@ function Upload() {
       </div>
 
       <div className="input-container">
-        <label>제목</label>
-        <input placeholder="간단한 제목을 입력해주세요." />
-        <span className="character-count">0/38</span>
+        <div className="title-container">
+          <label className="upload-label">제목</label>
+          <div className="tag">필수</div>
+        </div>
+        <textarea
+          className="upload-textarea"
+          value={title}
+          placeholder="간단한 제목을 입력해주세요."
+          onChange={(e) => {
+            setTitle(e.currentTarget.value);
+          }}
+          maxLength={38}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+            }
+          }}
+        />
+        <span className="character-count">{title.length}/38</span>
       </div>
 
       <div className="input-container">
-        <label>내용</label>
-        <input placeholder="최대 100자까지 작성 가능합니다." />
-        <span className="character-count">0/38</span>
+        <label className="upload-label">내용</label>
+        <textarea
+          className="upload-textarea"
+          placeholder="최대 100자까지 작성 가능합니다."
+          value={content}
+          onChange={(e) => {
+            setContent(e.currentTarget.value);
+          }}
+          maxLength={100}
+        />
+        <span className="character-count">{content.length}/100</span>
+      </div>
+
+      <div className="input-container">
+        <label className="upload-label">태그</label>
+
+        {tagList.length > 0 && (
+          <div className="upload-tag-container">
+            {tagList.map((tag, index) => (
+              <span className="upload-tag" key={index}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <textarea
+          className="upload-textarea"
+          placeholder="태그를 설정하면 더 빠르게 피드백을 받을 수 있어요."
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              const tag = e.currentTarget.value.trim();
+              setTagList([...tagList, tag]);
+              e.currentTarget.value = '';
+            }
+          }}
+        />
       </div>
     </div>
   );

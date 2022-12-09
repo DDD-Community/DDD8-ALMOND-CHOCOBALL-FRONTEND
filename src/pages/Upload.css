@@ -7,24 +7,28 @@
   margin-top: 24px;
 }
 
-label {
+.upload-label {
   font-size: 16px;
   font-weight: 700;
   color: #9ea7ad;
 }
 
-input {
+.upload-textarea {
   font-size: 14px;
   font-weight: 500;
   background-color: inherit;
   border: none;
   border-bottom: 1px solid #f0f1f3;
   outline: none;
-  color: #9ea7ad;
-  padding: 12px 0px;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 0px 0px 0px;
+  resize: none;
+  overflow: hidden;
 }
 
 .upload-image-container {
+  margin-top: 16px;
   margin-bottom: 40px;
 }
 
@@ -64,6 +68,10 @@ input {
   position: relative;
 }
 
+.image-item + .image-item {
+  margin-left: 12px;
+}
+
 .image-item-image {
   height: 100%;
   width: 100%;
@@ -95,4 +103,35 @@ input {
 
 .image-remove-button:hover {
   cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-tag-container {
+  display: flex;
+  margin-top: 12px;
+}
+
+.upload-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px;
+
+  width: 37px;
+  height: 24px;
+
+  background: #7bdb2f;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+}
+
+.upload-tag + .upload-tag {
+  margin-left: 8px;
 }
