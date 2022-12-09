@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
-import { Home, Upload, Profile } from './pages';
+import { Home, Upload, Profile, ProfileDetail } from './pages';
 import { Container } from '@mui/material';
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <Profile />,
+      },
+      {
+        path: 'profile/detail',
+        element: <ProfileDetail />,
       },
     ],
   },

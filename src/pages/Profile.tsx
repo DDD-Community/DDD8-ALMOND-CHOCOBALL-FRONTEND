@@ -5,6 +5,7 @@ import { AiOutlineLeft } from 'react-icons/ai';
 import { ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
 import './Profile.css';
+
 interface ImageItem {
   img: string;
   title: string;
@@ -43,14 +44,20 @@ function Profile() {
         gap={1}
       >
         {Array.from({ length: 9 }).map((item, index) => (
-          <ImageListItem key={index}>
-            <img
-              src={require('./testImage.png')}
-              srcSet={require('./testImage.png')}
-              alt="title"
-              loading="lazy"
-            />
-          </ImageListItem>
+          <div
+            onClick={() => {
+              navigate('/profile/detail');
+            }}
+          >
+            <ImageListItem key={index}>
+              <img
+                src={require('./testImage.png')}
+                srcSet={require('./testImage.png')}
+                alt="title"
+                loading="lazy"
+              />
+            </ImageListItem>
+          </div>
         ))}
       </ImageList>
     </div>
