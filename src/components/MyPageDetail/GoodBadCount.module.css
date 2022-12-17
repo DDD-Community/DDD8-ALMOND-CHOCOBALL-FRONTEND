@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 12px;
+
+  width: 147.5px;
+  height: 60px;
+
+  border: 0.25px solid #8f8f8f;
+  border-radius: 12px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.container + .container {
+  margin-left: 12px;
+}
