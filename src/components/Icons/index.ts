@@ -5,3 +5,5 @@ export { default as IconIc } from './IconIc';
 export { default as IconMyPage } from './IconMyPage';
 export { default as IconSearch } from './IconSearch';
 export { default as IconUpload } from './IconUpload';
+export { default as IconGood } from './IconGood';
+export { default as IconBad } from './IconBad';
