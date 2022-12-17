@@ -70,3 +70,7 @@ th {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.MuiContainer-root {
+  padding: 0 !important;
+}

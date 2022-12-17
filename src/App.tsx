@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <Container maxWidth="sm" sx={{ height: '100%' }}>
+    <Container maxWidth="sm" sx={{ height: '100%', overflow: 'hidden' }}>
       <RouterProvider router={router} />
     </Container>
   );
