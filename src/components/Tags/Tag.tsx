@@ -1,11 +1,12 @@
 import React from 'react';
-import './Tag.css';
+import styles from './Tag.module.css';
 
 interface Props {
   text: string;
 }
+
 function Tag({ text }: Props) {
-  return <span className="tag">{text}</span>;
+  return <span className={styles.Tag}>{text}</span>;
 }
 
 export default Tag;
