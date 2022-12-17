@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { ImageListItem } from '@mui/material';
-import { useState } from 'react';
-import './Profile.css';
+// import { ImageListItem } from '@mui/material';
+// import { useState } from 'react';
+import './MyPageDetail.css';
 
-function Profile() {
+function MyPageDetail() {
   const navigate = useNavigate();
 
   return (
@@ -39,4 +39,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default MyPageDetail;

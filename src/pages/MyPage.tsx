@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
-import './Profile.css';
+import './MyPage.css';
 
 interface ImageItem {
   img: string;
   title: string;
 }
 
-function Profile() {
+function MyPage() {
   const navigate = useNavigate();
   const [imageItem, setImageItem] = useState<ImageItem[]>([]);
 
@@ -27,9 +27,9 @@ function Profile() {
         centerText={'마이페이지'}
       />
 
-      <div className="profile-container">
-        <h3 className="profile-id">춤추는 원숭</h3>
-        <span className="profile-posts">게시물 13</span>
+      <div className="myPage-container">
+        <h3 className="myPage-id">춤추는 원숭</h3>
+        <span className="myPage-posts">게시물 13</span>
       </div>
       <ImageList
         cols={2}
@@ -46,7 +46,7 @@ function Profile() {
         {Array.from({ length: 9 }).map((item, index) => (
           <div
             onClick={() => {
-              navigate('/profile/detail');
+              navigate('/myPage/detail');
             }}
           >
             <ImageListItem key={index}>
@@ -64,4 +64,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default MyPage;

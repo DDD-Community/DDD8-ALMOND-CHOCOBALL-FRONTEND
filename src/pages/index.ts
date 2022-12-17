@@ -1,4 +1,4 @@
 export { default as Home } from './Home';
 export { default as Upload } from './Upload';
-export { default as Profile } from './Profile';
-export { default as ProfileDetail } from './ProfileDetail';
+export { default as MyPage } from './MyPage';
+export { default as MyPageDetail } from './MyPageDetail';
