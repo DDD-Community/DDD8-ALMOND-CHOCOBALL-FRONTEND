@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeaderBackButton, Header } from '../components/Headers';
 import GoodBadCount from '../components/MyPageDetail/GoodBadCount';
 import { useNavigate } from 'react-router-dom';
 // import { ImageListItem } from '@mui/material';
