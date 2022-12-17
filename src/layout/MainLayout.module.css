@@ -1,5 +1,6 @@
 .main {
   flex: 1;
   height: calc(100% - 80px);
+  margin-bottom: 80px;
   overflow-y: scroll;
 }
