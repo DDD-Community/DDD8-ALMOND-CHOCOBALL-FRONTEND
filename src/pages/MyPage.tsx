@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
 import './MyPage.css';
+import styles from './MyPage.module.css';
 interface ImageItem {
   img: string;
   title: string;
@@ -10,14 +11,14 @@ interface ImageItem {
 
 function MyPage() {
   const navigate = useNavigate();
-  const [imageItem, setImageItem] = useState<ImageItem[]>([]);
 
   return (
-    <div>
-      <div className="myPage-container">
-        <h3 className="myPage-id">춤추는 원숭</h3>
-        <span className="myPage-posts">게시물 13</span>
+    <div className={styles.MyPageContainer}>
+      <div className={styles.TitleContainer}>
+        <div className={styles.Title}>춤추는 원숭</div>
+        <div className={styles.SubTitle}>게시물 13</div>
       </div>
+
       <ImageList
         cols={2}
         style={{
