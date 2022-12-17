@@ -6,6 +6,8 @@ import { Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import styles from './MainLayout.module.css';
 import { IconHome, IconMyPage, IconUpload } from '../components/Icons';
+import { Header, HeaderBackButton } from '../components/Headers';
+
 function Root() {
   const [navigationValue, setNavigationValue] = useState<
     'home' | 'upload' | 'mypage'
@@ -19,25 +21,23 @@ function Root() {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignContent: 'center',
-        justifyContent: 'center',
+        position: 'relative',
+        overflowY: 'hidden',
       }}
     >
+      <Header left={<HeaderBackButton />} />
+
       <main className={styles.main}>
         <Outlet />
       </main>
+
       <BottomNavigation
-        className="bottom-navigation"
         sx={{
           backgroundColor: '#17171b',
           position: 'fixed',
-          padding: 0,
           bottom: 0,
-          left: 0,
           width: '100%',
           height: '80px',
-          display: 'flex',
-          alignItems: 'center',
         }}
         value={navigationValue}
         onChange={(event, newValue) => {
@@ -47,7 +47,6 @@ function Root() {
       >
         <BottomNavigationAction
           value={'home'}
-          sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
           icon={
             <IconHome
               fill={navigationValue === 'home' ? '#fff' : '#8f8f8f'}
@@ -59,7 +58,6 @@ function Root() {
         />
         <BottomNavigationAction
           value={'upload'}
-          sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
           icon={
             <IconUpload
               fill={navigationValue === 'upload' ? '#fff' : '#8f8f8f'}
@@ -71,7 +69,6 @@ function Root() {
         />
         <BottomNavigationAction
           value={'mypage'}
-          sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
           icon={
             <IconMyPage
               fill={navigationValue === 'mypage' ? '#fff' : '#8f8f8f'}

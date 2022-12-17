@@ -28,8 +28,6 @@ function Upload() {
 
   return (
     <div>
-      <Header left={<HeaderBackButton />} right={<HeaderCompleteButton />} />
-
       <div className="upload-image-container">
         <ImageUploading
           multiple
