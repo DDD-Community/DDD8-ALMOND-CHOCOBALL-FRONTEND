@@ -5,9 +5,35 @@
   align-items: center;
 }
 
+.imageContainer {
+  width: 100%;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
 .contentContainer {
   padding: 0 35px;
 }
+
+.titleContainer {
+  margin-top: 32px;
+}
+
 .goodBadCountContainer {
+  margin-top: 22px;
   display: flex;
+}
+
+.tagListContainer {
+  margin-top: 20px;
+}
+
+.mainTextContainer {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #dddddd;
 }
