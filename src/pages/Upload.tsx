@@ -1,5 +1,9 @@
 import React from 'react';
-import { HeaderBackButton, Header } from '../components/Headers';
+import {
+  HeaderBackButton,
+  Header,
+  HeaderCompleteButton,
+} from '../components/Headers';
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -24,18 +28,7 @@ function Upload() {
 
   return (
     <div>
-      <Header
-        left={<HeaderBackButton />}
-        right={
-          <span
-            onClick={() => {
-              navigate('/');
-            }}
-          >
-            완료
-          </span>
-        }
-      />
+      <Header left={<HeaderBackButton />} right={<HeaderCompleteButton />} />
 
       <div className="upload-image-container">
         <ImageUploading
