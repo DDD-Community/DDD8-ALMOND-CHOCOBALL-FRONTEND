@@ -6,7 +6,6 @@ import { Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import styles from './MainLayout.module.css';
 import { IconHome, IconMyPage, IconUpload } from '../components/Icons';
-
 function Root() {
   const [navigationValue, setNavigationValue] = useState<
     'home' | 'upload' | 'mypage'
@@ -19,7 +18,8 @@ function Root() {
         width: '100%',
         height: '100%',
         display: 'flex',
-        flexDirection: 'align',
+        flexDirection: 'column',
+        alignContent: 'center',
         justifyContent: 'center',
       }}
     >
@@ -33,6 +33,7 @@ function Root() {
           position: 'fixed',
           padding: 0,
           bottom: 0,
+          left: 0,
           width: '100%',
           height: '80px',
           display: 'flex',
