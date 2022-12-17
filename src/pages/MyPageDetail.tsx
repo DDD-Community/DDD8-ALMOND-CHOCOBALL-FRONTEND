@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
+import { HeaderBackButton, Header } from '../components/Headers';
+
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineLeft } from 'react-icons/ai';
 // import { ImageListItem } from '@mui/material';
 // import { useState } from 'react';
 import './MyPageDetail.css';
@@ -11,15 +11,7 @@ function MyPageDetail() {
 
   return (
     <div>
-      <Header
-        left={
-          <AiOutlineLeft
-            style={{ width: '24px', height: '24px' }}
-            onClick={() => navigate(-1)}
-          />
-        }
-        centerText={'마이페이지'}
-      />
+      <Header left={<HeaderBackButton />} centerText={'마이페이지'} />
 
       <div className="profile-detail-image-container">
         <img

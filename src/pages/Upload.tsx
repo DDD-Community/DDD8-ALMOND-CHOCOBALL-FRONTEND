@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
+import { HeaderBackButton, Header } from '../components/Headers';
+
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineLeft, AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 import './Upload.css';
 import ImageUploading, { ImageListType } from 'react-images-uploading';
@@ -25,12 +25,7 @@ function Upload() {
   return (
     <div>
       <Header
-        left={
-          <AiOutlineLeft
-            style={{ width: '24px', height: '24px' }}
-            onClick={() => navigate(-1)}
-          />
-        }
+        left={<HeaderBackButton />}
         right={
           <span
             onClick={() => {

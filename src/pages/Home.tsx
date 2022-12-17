@@ -1,7 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
+import {
+  HeaderBackButton,
+  Header,
+  HeaderSearchButton,
+} from '../components/Headers';
+
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineLeft, AiOutlineSearch } from 'react-icons/ai';
 import './Home.css';
 import Tag from '../components/Tag';
 import { useSwipeable } from 'react-swipeable';
@@ -15,19 +19,9 @@ function Home() {
   return (
     <div className="home-container">
       <Header
-        left={
-          <AiOutlineLeft
-            style={{ width: '24px', height: '24px' }}
-            onClick={() => navigate(-1)}
-          />
-        }
+        left={<HeaderBackButton />}
         centerText={'logo'}
-        right={
-          <AiOutlineSearch
-            style={{ width: '24px', height: '24px' }}
-            onClick={() => {}}
-          />
-        }
+        right={<HeaderSearchButton />}
       />
 
       <div className="image-container" {...handlers}>

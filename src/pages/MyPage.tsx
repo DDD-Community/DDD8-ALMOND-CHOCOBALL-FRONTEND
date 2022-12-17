@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
 import './MyPage.css';
-
+import { HeaderBackButton, Header } from '../components/Headers';
 interface ImageItem {
   img: string;
   title: string;
@@ -17,15 +16,7 @@ function MyPage() {
 
   return (
     <div>
-      <Header
-        left={
-          <AiOutlineLeft
-            style={{ width: '24px', height: '24px' }}
-            onClick={() => navigate(-1)}
-          />
-        }
-        centerText={'마이페이지'}
-      />
+      <Header left={<HeaderBackButton />} centerText={'마이페이지'} />
 
       <div className="myPage-container">
         <h3 className="myPage-id">춤추는 원숭</h3>
