@@ -12,12 +12,9 @@ function Header({ left, right }: Props) {
 
   const getCenterContent = (pathname: string) => {
     if (pathname === '/' || pathname === '/home') return <IconGood />;
-    if (pathname === '/mypage') return '마이페이지';
+    if (pathname === '/mypage' || pathname === '/mypage/detail')
+      return '마이페이지';
   };
-
-  if (location.pathname === '/mypage/detail') {
-    return null;
-  }
 
   return (
     <header className={styles.Header}>
