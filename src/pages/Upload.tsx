@@ -1,17 +1,11 @@
 import React from 'react';
-import {
-  HeaderBackButton,
-  Header,
-  HeaderCompleteButton,
-} from '../components/Headers';
 
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Upload.css';
 import ImageUploading, { ImageListType } from 'react-images-uploading';
+import styles from './Upload.module.css';
 
 function Upload() {
-  const navigate = useNavigate();
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -27,7 +21,7 @@ function Upload() {
   };
 
   return (
-    <div>
+    <div className={styles.UploadContainer}>
       <div className="upload-image-container">
         <ImageUploading
           multiple
