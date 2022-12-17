@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
-import { Home, Upload, MyPageDetail, MyPage } from './pages';
+import { Home, Upload, MyPageDetail, MyPage, Post } from './pages';
 
 import { Container } from '@mui/material';
 const router = createBrowserRouter([
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: 'home',
         element: <Home />,
+      },
+      {
+        path: 'post/:id',
+        element: <Post />,
       },
       {
         path: 'upload',
