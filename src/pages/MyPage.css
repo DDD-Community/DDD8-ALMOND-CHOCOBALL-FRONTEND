@@ -1,4 +1,4 @@
-.profile-id {
+.mypage-id {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -6,13 +6,13 @@
   margin-top: 16px;
 }
 
-.profile-posts {
+.mypage-posts {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #858585;
 }
 
-.profile-container {
+.mypage-container {
   margin-bottom: 16px;
 }
