@@ -1,14 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
-import { AiOutlineHome, AiOutlinePlusSquare } from 'react-icons/ai';
-import { RxPerson } from 'react-icons/rx';
 import { Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import './MainLayout.css';
+import styles from './MainLayout.module.css';
+import { IconHome, IconMyPage, IconUpload } from '../components/Icons';
 
 function Root() {
-  const [navigationValue, setNavigationValue] = React.useState();
+  const [navigationValue, setNavigationValue] = useState<
+    'home' | 'upload' | 'mypage'
+  >('home');
   const navigate = useNavigate();
 
   return (
@@ -21,7 +23,7 @@ function Root() {
         justifyContent: 'center',
       }}
     >
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
       <BottomNavigation
@@ -45,19 +47,37 @@ function Root() {
         <BottomNavigationAction
           value={'home'}
           sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
-          icon={<AiOutlineHome />}
+          icon={
+            <IconHome
+              fill={navigationValue === 'home' ? '#fff' : '#8f8f8f'}
+              width="36"
+              height="36"
+            />
+          }
           className="bottom-navigation-action"
         />
         <BottomNavigationAction
           value={'upload'}
           sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
-          icon={<AiOutlinePlusSquare />}
+          icon={
+            <IconUpload
+              fill={navigationValue === 'upload' ? '#fff' : '#8f8f8f'}
+              width="36"
+              height="36"
+            />
+          }
           className="bottom-navigation-action"
         />
         <BottomNavigationAction
-          value={'profile'}
+          value={'mypage'}
           sx={{ color: '#fff', fontSize: '36px', height: '100%', padding: 0 }}
-          icon={<RxPerson />}
+          icon={
+            <IconMyPage
+              fill={navigationValue === 'mypage' ? '#fff' : '#8f8f8f'}
+              width="36"
+              height="36"
+            />
+          }
           className="bottom-navigation-action"
         />
       </BottomNavigation>
