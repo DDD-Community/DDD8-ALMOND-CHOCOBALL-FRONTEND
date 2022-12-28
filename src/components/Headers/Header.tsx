@@ -14,6 +14,7 @@ function Header({ left, right }: Props) {
     if (pathname === '/' || pathname === '/home') return <IconGood />;
     if (pathname === '/mypage' || pathname === '/mypage/detail')
       return '마이페이지';
+    if (pathname === '/login') return '로그인';
   };
 
   return (
