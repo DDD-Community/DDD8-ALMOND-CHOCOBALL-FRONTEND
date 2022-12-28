@@ -1,24 +1,11 @@
 import React from 'react';
-import GoodBadCount from '../components/MyPageDetail/GoodBadCount';
-import { useNavigate } from 'react-router-dom';
-// import { ImageListItem } from '@mui/material';
-// import { useState } from 'react';
+import GoodBadCount from '../../components/MyPageDetail/GoodBadCount';
 import styles from './MyPageDetail.module.css';
-import { TagList } from '../components/Tags';
+import { TagList } from '../../components/Tags';
 function MyPageDetail() {
-  const navigate = useNavigate();
-
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <img
-          className="profile-detail-image"
-          src={require('./testImage.png')}
-          srcSet={require('./testImage.png')}
-          alt="title"
-          loading="lazy"
-        />
-      </div>
+      <div className={styles.imageContainer}></div>
 
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>

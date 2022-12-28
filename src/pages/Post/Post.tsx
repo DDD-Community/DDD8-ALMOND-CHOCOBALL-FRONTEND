@@ -1,19 +1,11 @@
 import React from 'react';
-import { TagList } from '../components/Tags';
+import { TagList } from '../../components/Tags';
 import styles from './Post.module.css';
 
 function MyPageDetail() {
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <img
-          className="profile-detail-image"
-          src={require('./testImage.png')}
-          srcSet={require('./testImage.png')}
-          alt="title"
-          loading="lazy"
-        />
-      </div>
+      <div className={styles.imageContainer}></div>
 
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>

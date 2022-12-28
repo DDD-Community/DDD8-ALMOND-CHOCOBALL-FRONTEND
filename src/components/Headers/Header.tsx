@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
-import { Route, Link, Routes, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { IconGood } from '../Icons';
 interface Props {
   left?: React.ReactNode;

@@ -1,13 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ImageList, ImageListItem } from '@mui/material';
-import { useState } from 'react';
 import './MyPage.css';
 import styles from './MyPage.module.css';
-interface ImageItem {
-  img: string;
-  title: string;
-}
 
 function MyPage() {
   const navigate = useNavigate();
@@ -37,14 +32,7 @@ function MyPage() {
               navigate('/mypage/detail');
             }}
           >
-            <ImageListItem key={index}>
-              <img
-                src={require('./testImage.png')}
-                srcSet={require('./testImage.png')}
-                alt="title"
-                loading="lazy"
-              />
-            </ImageListItem>
+            <ImageListItem key={index}></ImageListItem>
           </div>
         ))}
       </ImageList>
