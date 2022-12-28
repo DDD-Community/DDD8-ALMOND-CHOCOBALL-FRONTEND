@@ -1,4 +1,3 @@
-import { AxiosPromise } from 'axios';
 import axios from '../../lib/axios';
 import type {
   PostDisLikeResponse,
@@ -8,55 +7,48 @@ import type {
   GetPostsResponse,
 } from './responseType';
 
-export const fetchPostPost = async (
-  title: string,
-  imgs: File[]
-): AxiosPromise<PostPostResponse> => {
-  const response = await axios.post('/posts', {
+export async function fetchPostPost(title: string, imgs: File[]) {
+  const response = await axios.post<PostPostResponse>('/posts', {
     data: {
       title,
       imgs,
     },
   });
   return response.data;
-};
+}
 
-export const fetchGetPosts = async ({
+export async function fetchGetPosts({
   start,
   limit,
 }: {
   start: number;
   limit: number;
-}): AxiosPromise<GetPostsResponse> => {
-  const response = await axios.get(`/posts?start=${start}&limit=${limit}`);
+}) {
+  const response = await axios.get<GetPostsResponse>(
+    `/posts?start=${start}&limit=${limit}`
+  );
   return response.data;
-};
+}
 
-export const fetchGetPost = async (
-  postId: number
-): AxiosPromise<GetPostResponse> => {
-  const response = await axios.get(`/posts/${postId}`);
+export async function fetchGetPost(postId: number) {
+  const response = await axios.get<GetPostResponse>(`/posts/${postId}`);
   return response.data;
-};
+}
 
-export const fetchPostLike = async (
-  postId: number
-): AxiosPromise<PostLikeResponse> => {
-  const response = await axios.post(`/posts/like`, {
+export async function fetchPostLike(postId: number) {
+  const response = await axios.post<PostLikeResponse>(`/posts/like`, {
     data: {
       postId,
     },
   });
   return response.data;
-};
+}
 
-export const fetchPostDisLike = async (
-  postId: number
-): AxiosPromise<PostDisLikeResponse> => {
-  const response = await axios.post(`/posts/dislike`, {
+export async function fetchPostDisLike(postId: number) {
+  const response = await axios.post<PostDisLikeResponse>(`/posts/dislike`, {
     data: {
       postId,
     },
   });
   return response.data;
-};
+}
