@@ -5,8 +5,8 @@ import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import styles from './MainLayout.module.css';
-import { IconHome, IconMyPage, IconUpload } from '../components/Icons';
-import { Header, HeaderBackButton } from '../components/Headers';
+import { IconHome, IconMyPage, IconUpload } from '../components/common/Icons';
+import { Header, HeaderBackButton } from '../components/common/Headers';
 
 function Root() {
   const [navigationValue, setNavigationValue] = useState<

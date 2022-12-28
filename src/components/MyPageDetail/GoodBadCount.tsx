@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconGood, IconBad } from '../Icons';
+import { IconGood, IconBad } from '../common/Icons';
 import styles from './GoodBadCount.module.css';
 
 interface Props {

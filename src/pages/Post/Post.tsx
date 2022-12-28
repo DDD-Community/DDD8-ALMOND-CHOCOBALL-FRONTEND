@@ -1,5 +1,5 @@
 import React from 'react';
-import { TagList } from '../../components/Tags';
+import { TagList } from '../../components/common/Tags';
 import styles from './Post.module.css';
 
 function MyPageDetail() {

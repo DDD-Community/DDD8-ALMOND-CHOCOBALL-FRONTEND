@@ -1,7 +1,7 @@
 import React from 'react';
 import GoodBadCount from '../../components/MyPageDetail/GoodBadCount';
 import styles from './MyPageDetail.module.css';
-import { TagList } from '../../components/Tags';
+import { TagList } from '../../components/common/Tags';
 function MyPageDetail() {
   return (
     <div className={styles.container}>
