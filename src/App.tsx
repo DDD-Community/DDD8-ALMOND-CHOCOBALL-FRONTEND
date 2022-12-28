@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
-import { Home, Upload, MyPageDetail, MyPage, Post } from './pages';
+import { Home, Upload, MyPageDetail, MyPage, Post, Login } from './pages';
 
 import { Container } from '@mui/material';
 const router = createBrowserRouter([
@@ -33,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'mypage/detail',
         element: <MyPageDetail />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
       },
     ],
   },
