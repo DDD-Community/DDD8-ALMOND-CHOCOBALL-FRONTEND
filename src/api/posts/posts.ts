@@ -17,13 +17,7 @@ export async function fetchPostPost(title: string, imgs: File[]) {
   return response.data;
 }
 
-export async function fetchGetPosts({
-  start,
-  limit,
-}: {
-  start: number;
-  limit: number;
-}) {
+export async function fetchGetPosts(start: number, limit: number) {
   const response = await axios.get<GetPostsResponse>(
     `/posts?start=${start}&limit=${limit}`
   );
