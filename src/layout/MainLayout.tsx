@@ -25,7 +25,7 @@ function Root() {
         overflowY: 'hidden',
       }}
     >
-      <Header left={<HeaderBackButton />} />
+      <Header />
 
       <main className={styles.main}>
         <Outlet />
@@ -36,6 +36,7 @@ function Root() {
           backgroundColor: '#17171b',
           position: 'fixed',
           bottom: 0,
+          left: 0,
           width: '100%',
           height: '80px',
         }}
