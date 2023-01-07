@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './LoginPage.module.css';
 import NaverIcon from '../../images/Naver.svg';
-
+import LoginImage from '../../images/login-logo.png';
 function LoginPage() {
   return (
     <div>
@@ -11,7 +11,9 @@ function LoginPage() {
           <span className={styles.highlight}>내모지</span>입니다.
         </div>
       </div>
-      <div className={styles.MotionGraphicContainer}></div>
+      <div className={styles.MotionGraphicContainer}>
+        <img src={LoginImage} alt="login logo" />
+      </div>
       <div className={styles.ButtonContainer}>
         <button className={styles.NaverLoginBtn}>
           <img src={NaverIcon} alt="naver login" />

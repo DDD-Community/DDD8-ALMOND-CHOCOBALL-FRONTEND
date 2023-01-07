@@ -18,6 +18,14 @@
   margin-top: 32px;
   min-height: 375px;
   width: 100%;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MotionGraphicContainer img {
+  width: 260px;
+  height: 260px;
 }
 
 .ButtonContainer {
